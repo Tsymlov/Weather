@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3DC1ADAB1B74A2510022C821 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1ADAA1B74A2510022C821 /* AppDelegate.swift */; };
-		3DC1ADAD1B74A2510022C821 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1ADAC1B74A2510022C821 /* ViewController.swift */; };
+		3DC1ADAD1B74A2510022C821 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1ADAC1B74A2510022C821 /* WeatherViewController.swift */; };
 		3DC1ADB01B74A2510022C821 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC1ADAE1B74A2510022C821 /* Main.storyboard */; };
 		3DC1ADB21B74A2510022C821 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC1ADB11B74A2510022C821 /* Images.xcassets */; };
 		3DC1ADB51B74A2510022C821 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DC1ADB31B74A2510022C821 /* LaunchScreen.xib */; };
 		3DC1ADC11B74A2510022C821 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1ADC01B74A2510022C821 /* WeatherTests.swift */; };
+		3DC1ADCB1B74B9EE0022C821 /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1ADCA1B74B9EE0022C821 /* WeatherInfo.swift */; };
 		7532B50B7433C78293DA6180 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73317E0257B2D53F7260FDC9 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -30,13 +31,14 @@
 		3DC1ADA51B74A2510022C821 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC1ADA91B74A2510022C821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC1ADAA1B74A2510022C821 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DC1ADAC1B74A2510022C821 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DC1ADAC1B74A2510022C821 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		3DC1ADAF1B74A2510022C821 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DC1ADB11B74A2510022C821 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3DC1ADB41B74A2510022C821 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3DC1ADBA1B74A2510022C821 /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC1ADBF1B74A2510022C821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC1ADC01B74A2510022C821 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
+		3DC1ADCA1B74B9EE0022C821 /* WeatherInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
 		73317E0257B2D53F7260FDC9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFFB4E4CF20D1B668E57579 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AB9F5F4D2B48A280CFF65EED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,8 +95,9 @@
 		3DC1ADA71B74A2510022C821 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				3DC1ADAC1B74A2510022C821 /* ViewController.swift */,
-				3DC1ADAE1B74A2510022C821 /* Main.storyboard */,
+				3DC1ADCE1B74BA120022C821 /* Views */,
+				3DC1ADCD1B74BA010022C821 /* Controllers */,
+				3DC1ADCC1B74B9F30022C821 /* Model */,
 				3DC1ADA81B74A2510022C821 /* Supporting Files */,
 			);
 			path = Weather;
@@ -103,7 +106,6 @@
 		3DC1ADA81B74A2510022C821 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3DC1ADB31B74A2510022C821 /* LaunchScreen.xib */,
 				3DC1ADB11B74A2510022C821 /* Images.xcassets */,
 				3DC1ADAA1B74A2510022C821 /* AppDelegate.swift */,
 				3DC1ADA91B74A2510022C821 /* Info.plist */,
@@ -126,6 +128,31 @@
 				3DC1ADBF1B74A2510022C821 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DC1ADCC1B74B9F30022C821 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DC1ADCA1B74B9EE0022C821 /* WeatherInfo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3DC1ADCD1B74BA010022C821 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3DC1ADAC1B74A2510022C821 /* WeatherViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3DC1ADCE1B74BA120022C821 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DC1ADB31B74A2510022C821 /* LaunchScreen.xib */,
+				3DC1ADAE1B74A2510022C821 /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		D143E8EF683041574E58C0BB /* Frameworks */ = {
@@ -287,8 +314,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DC1ADAD1B74A2510022C821 /* ViewController.swift in Sources */,
+				3DC1ADAD1B74A2510022C821 /* WeatherViewController.swift in Sources */,
 				3DC1ADAB1B74A2510022C821 /* AppDelegate.swift in Sources */,
+				3DC1ADCB1B74B9EE0022C821 /* WeatherInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading data..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dG-Z2-c81">
+                                <rect key="frame" x="243" y="204" width="115.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lw-wp-CyU">
+                                <rect key="frame" x="297.5" y="232" width="5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cza-mb-th7">
+                                <rect key="frame" x="298" y="261" width="5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMJ-Cp-O12">
+                                <rect key="frame" x="298" y="289" width="5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhB-PG-yaA">
+                                <rect key="frame" x="298" y="318" width="5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y81-LP-OEc">
+                                <rect key="frame" x="298" y="346" width="5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1lw-wp-CyU" firstAttribute="centerX" secondItem="0dG-Z2-c81" secondAttribute="centerX" constant="-0.5" id="1y4-Dt-wkL"/>
+                            <constraint firstAttribute="centerX" secondItem="cMJ-Cp-O12" secondAttribute="centerX" id="3I7-y5-THy"/>
+                            <constraint firstItem="rhB-PG-yaA" firstAttribute="top" secondItem="cMJ-Cp-O12" secondAttribute="bottom" constant="8" id="8yN-xD-1e5"/>
+                            <constraint firstItem="1lw-wp-CyU" firstAttribute="centerX" secondItem="cza-mb-th7" secondAttribute="centerX" constant="-0.5" id="CFJ-sK-m6d"/>
+                            <constraint firstItem="rhB-PG-yaA" firstAttribute="centerX" secondItem="cMJ-Cp-O12" secondAttribute="centerX" id="IFQ-Vu-gkf"/>
+                            <constraint firstItem="1lw-wp-CyU" firstAttribute="top" secondItem="0dG-Z2-c81" secondAttribute="bottom" constant="8" id="OZU-5H-cQj"/>
+                            <constraint firstItem="cza-mb-th7" firstAttribute="centerX" secondItem="cMJ-Cp-O12" secondAttribute="centerX" id="Wmt-0y-dpg"/>
+                            <constraint firstItem="cMJ-Cp-O12" firstAttribute="top" secondItem="cza-mb-th7" secondAttribute="bottom" constant="8" id="XiN-Jf-4M7"/>
+                            <constraint firstItem="Y81-LP-OEc" firstAttribute="top" secondItem="rhB-PG-yaA" secondAttribute="bottom" constant="8" id="dQQ-Ye-ZZI"/>
+                            <constraint firstItem="cza-mb-th7" firstAttribute="top" secondItem="1lw-wp-CyU" secondAttribute="bottom" constant="8" id="jEC-QZ-Nud"/>
+                            <constraint firstItem="rhB-PG-yaA" firstAttribute="centerX" secondItem="Y81-LP-OEc" secondAttribute="centerX" id="jvK-70-B3n"/>
+                            <constraint firstAttribute="centerY" secondItem="cMJ-Cp-O12" secondAttribute="centerY" id="uYt-94-T1a"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="0dG-Z2-c81" id="qGY-7K-ZWa"/>
+                        <outlet property="forecastLabel0" destination="cza-mb-th7" id="Z5s-jT-3ON"/>
+                        <outlet property="forecastLabel1" destination="cMJ-Cp-O12" id="sP7-Dv-C9t"/>
+                        <outlet property="forecastLabel2" destination="rhB-PG-yaA" id="k77-cV-kuS"/>
+                        <outlet property="forecastLabel3" destination="Y81-LP-OEc" id="R8y-WA-IEg"/>
+                        <outlet property="temperatureLabel" destination="1lw-wp-CyU" id="Xil-uc-ooK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
